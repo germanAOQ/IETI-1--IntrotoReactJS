@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import {Todo} from './Todo'
+import {Todo,TodoList} from './Todo'
 
 
 function App() {
@@ -27,15 +27,6 @@ function App() {
   );
 }
 
-class TodoList extends React.Component{
-	
-	render(){
-		const list = this.props.todoList;
-		const dynamicList = list.map((elemento) =>
-			<Todo text={elemento.text} priority={elemento.priority} dueDate={elemento.dueDate.toString()}/>
-			);
-		return dynamicList;
-	}
-}
+
 
 export default App;

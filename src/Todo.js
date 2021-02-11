@@ -20,3 +20,15 @@ export class Todo extends React.Component {
     }
 
 }
+
+export class TodoList extends React.Component{
+	
+	render(){
+		const list = this.props.todoList;
+		console.log(list);
+		const dynamicList = list.map((elemento) =>
+			<Todo text={elemento.text} priority={elemento.priority} dueDate={elemento.dueDate.toString()}/>
+			);
+		return dynamicList;
+	}
+}
